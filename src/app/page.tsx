@@ -1,6 +1,5 @@
 import React from "react";
 import HeroSection from "@/components/sections/HeroSection";
-import SkillsSection from "@/components/sections/SkillsSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
 
 export default function Home() {
@@ -14,38 +13,7 @@ export default function Home() {
         imageUrl="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80"
       />
 
-      {/* Skills Section */}
-      <SkillsSection
-        skills={[
-          {
-            category: "Frontend",
-            items: [
-              { name: "React", proficiency: 90 },
-              { name: "Next.js", proficiency: 85 },
-              { name: "TypeScript", proficiency: 80 },
-              { name: "Tailwind CSS", proficiency: 95 },
-            ],
-          },
-          {
-            category: "Backend",
-            items: [
-              { name: "Node.js", proficiency: 85 },
-              { name: "Express", proficiency: 80 },
-              { name: "PostgreSQL", proficiency: 75 },
-              { name: "MongoDB", proficiency: 70 },
-            ],
-          },
-          {
-            category: "Tools & Others",
-            items: [
-              { name: "Git", proficiency: 90 },
-              { name: "Docker", proficiency: 75 },
-              { name: "AWS", proficiency: 70 },
-              { name: "Figma", proficiency: 80 },
-            ],
-          },
-        ]}
-      />
+      
 
       {/* Projects Section */}
       <ProjectsSection
@@ -320,59 +288,6 @@ export default function Home() {
               </div>
             </div>
 
-            <form className="space-y-4">
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium mb-1"
-                >
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-                  placeholder="Your name"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium mb-1"
-                >
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-                  placeholder="your.email@example.com"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium mb-1"
-                >
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  rows={5}
-                  className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-                  placeholder="Your message here..."
-                ></textarea>
-              </div>
-
-              <button
-                type="submit"
-                className="w-full bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90 transition-colors"
-              >
-                Send Message
-              </button>
-            </form>
           </div>
         </div>
       </section>

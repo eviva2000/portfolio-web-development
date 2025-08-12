@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+// import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import ProjectCard from "../projects/ProjectCard";
 
 type Project = {
@@ -81,18 +81,7 @@ export default function ProjectsSection() {
       repoUrl: "https://github.com/example/project",
       category: "fullstack",
     },
-    {
-      id: "6",
-      title: "Content Management System",
-      description:
-        "Custom CMS for managing digital content with user roles and permissions.",
-      image:
-        "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&q=80",
-      technologies: ["Node.js", "MongoDB", "Express.js"],
-      demoUrl: "https://example.com/demo",
-      repoUrl: "https://github.com/example/project",
-      category: "backend",
-    },
+  
   ];
 
   // Filter projects based on active filter
@@ -112,52 +101,15 @@ export default function ProjectsSection() {
           </p>
         </div>
 
-        <Tabs
-          defaultValue="all"
-          className="w-full"
-          onValueChange={setActiveFilter}
-        >
-          <div className="flex justify-center mb-8">
-            <TabsList>
-              <TabsTrigger value="all">All Projects</TabsTrigger>
-              <TabsTrigger value="frontend">Frontend</TabsTrigger>
-              <TabsTrigger value="backend">Backend</TabsTrigger>
-              <TabsTrigger value="fullstack">Full Stack</TabsTrigger>
-            </TabsList>
-          </div>
-
-          <TabsContent value="all" className="mt-0">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredProjects.map((project) => (
+              {projects.map((project) => (
                 <ProjectCard key={project.id} project={project} />
               ))}
             </div>
-          </TabsContent>
 
-          <TabsContent value="frontend" className="mt-0">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredProjects.map((project) => (
-                <ProjectCard key={project.id} project={project} />
-              ))}
-            </div>
-          </TabsContent>
+          
 
-          <TabsContent value="backend" className="mt-0">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredProjects.map((project) => (
-                <ProjectCard key={project.id} project={project} />
-              ))}
-            </div>
-          </TabsContent>
-
-          <TabsContent value="fullstack" className="mt-0">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredProjects.map((project) => (
-                <ProjectCard key={project.id} project={project} />
-              ))}
-            </div>
-          </TabsContent>
-        </Tabs>
+          
       </div>
     </section>
   );
