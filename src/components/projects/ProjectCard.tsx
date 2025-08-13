@@ -12,24 +12,29 @@ import Image from "next/image";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 interface ProjectCardProps {
+  project:{
+  id: string;
   title: string;
   description: string;
   image: string;
   technologies: string[];
   demoUrl?: string;
   repoUrl?: string;
-  featured?: boolean;
+  featured?: boolean;}
 }
 
 const ProjectCard = ({
-  title = "Project Title",
-  description = "A brief description of the project showcasing key features and technologies used in development.",
-  image = "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80",
-  technologies = ["React", "TypeScript", "Tailwind CSS"],
-  demoUrl = "#",
-  repoUrl = "#",
-  featured = false,
+project
 }: ProjectCardProps) => {
+  const {
+    title,
+    description,
+    image,
+    technologies,
+    demoUrl,
+    repoUrl,
+    featured = false,
+  } = project;
   return (
     <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg bg-card h-full flex flex-col">
       <div className="relative">

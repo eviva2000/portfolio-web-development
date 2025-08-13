@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-// import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import ProjectCard from "../projects/ProjectCard";
 
 type Project = {
@@ -69,18 +68,7 @@ export default function ProjectsSection() {
       repoUrl: "https://github.com/example/project",
       category: "frontend",
     },
-    {
-      id: "5",
-      title: "Social Media App",
-      description:
-        "Full-stack social media application with real-time messaging and notifications.",
-      image:
-        "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800&q=80",
-      technologies: ["React", "Firebase", "Socket.io"],
-      demoUrl: "https://example.com/demo",
-      repoUrl: "https://github.com/example/project",
-      category: "fullstack",
-    },
+   
   
   ];
 
