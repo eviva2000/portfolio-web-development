@@ -1,6 +1,7 @@
 import React from "react";
 import HeroSection from "@/components/sections/HeroSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
+import WhatIDeliver from "@/components/sections/WhatIDeliver";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       />
 
       
+      <WhatIDeliver/>
 
       {/* Projects Section */}
       <ProjectsSection

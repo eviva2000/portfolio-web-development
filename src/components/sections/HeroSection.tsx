@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Download, Github, Linkedin, Twitter } from "lucide-react";
+import { ArrowDown, Download, Github, Linkedin, Twitter,} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -30,7 +30,7 @@ export default function HeroSection({
   },
 }: HeroSectionProps) {
   return (
-    <section className="relative min-h-screen w-full flex flex-col justify-center items-center py-20 px-4 md:px-8 lg:px-16 bg-background">
+    <section className="relative min-h-screen w-full flex flex-col justify-center items-center py-20 px-4 md:px-8 lg:px-16 bg-[url(/bg-purple22.svg)] text-white bg-cover bg-center bg-norepeate">
       <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div className="flex flex-col space-y-6 order-2 md:order-1">
           <div className="space-y-3">
@@ -49,12 +49,12 @@ export default function HeroSection({
               <Link href="#projects">View Projectws</Link>
             </Button>
 
-            <Button variant="outline" asChild>
+            {/* <Button variant="outline" asChild>
               <Link href={resumeUrl} target="_blank" rel="noopener noreferrer">
                 <Download className="mr-2 h-4 w-4" />
                 Resume
               </Link>
-            </Button>
+            </Button> */}
           </div>
 
           <div className="flex items-center gap-4 pt-4">
@@ -96,17 +96,7 @@ export default function HeroSection({
           </div>
         </div>
 
-        <div className="flex justify-center md:justify-end order-1 md:order-2">
-          <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/20">
-            {/* <Image
-              src={imageUrl}
-              alt={name}
-              fill
-              className="object-cover"
-              priority
-            /> */}
-          </div>
-        </div>
+      
       </div>
 
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
