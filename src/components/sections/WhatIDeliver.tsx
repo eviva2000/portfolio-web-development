@@ -1,7 +1,10 @@
-// components/WhatIDeliver.tsx
+"use client";
 
 import { FC } from "react";
-import { Layout, Zap, Globe,Grid ,Monitor,Timer,Users,Globe2} from "lucide-react";
+import { Monitor,  Users,Timer } from "lucide-react";
+import { motion } from "framer-motion";
+import Lottie from "lottie-react";
+import webAnimation from "../../lotties/web-design.json";
 
 const WhatIDeliver: FC = () => {
   const items = [
@@ -23,31 +26,45 @@ const WhatIDeliver: FC = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-50" id="what-i-deliver">
-      <div className="max-w-6xl mx-auto px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">What I Deliver</h2>
-        <p className="text-lg text-gray-600 mb-10 max-w-2xl">
-          I help businesses turn ideas into sleek, high-performing websites that engage customers and drive results.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {items.map((item, index) => (
-            <div key={index} className="flex items-start space-x-4">
-              <div className="flex-shrink-0">{item.icon}</div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900">{item.title}</h3>
-                <p className="text-gray-600 text-sm">{item.description}</p>
+    <section className="py-16 md:py-40 bg-gray-50" id="what-i-deliver">
+      <div className="max-w-6xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        {/* Left: Text */}
+        <div>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">What I Deliver</h2>
+          <p className="text-lg text-gray-600 mb-10 max-w-2xl">
+            I help businesses turn ideas into sleek, high-performing websites that engage customers and drive results.
+          </p>
+          <div className="space-y-6">
+            {items.map((item, index) => (
+              <div key={index} className="flex items-start space-x-4">
+                <div className="flex-shrink-0">{item.icon}</div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900">{item.title}</h3>
+                  <p className="text-gray-600 text-sm">{item.description}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+          <div className="mt-10">
+            <a
+              href="#contact"
+              className="inline-block bg-blue-600 text-white px-6 py-3 rounded-md shadow hover:bg-blue-700 transition"
+            >
+              Let’s work together
+            </a>
+          </div>
         </div>
-        <div className="mt-10">
-          <a
-            href="#contact"
-            className="inline-block bg-blue-600 text-white px-6 py-3 rounded-md shadow hover:bg-blue-700 transition"
-          >
-            Let’s work together
-          </a>
-        </div>
+
+        {/* Right: Animated Lottie */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="w-full max-w-md mx-auto"
+        >
+          <Lottie animationData={webAnimation} loop={true} />
+        </motion.div>
       </div>
     </section>
   );

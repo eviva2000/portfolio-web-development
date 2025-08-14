@@ -44,17 +44,11 @@ export default function HeroSection({
 
           <p className="text-lg text-muted-foreground max-w-md">{tagline}</p>
 
-          <div className="flex flex-wrap gap-4 pt-2">
-            <Button asChild>
-              <Link href="#projects">View Projectws</Link>
+          <div className="flex flex-wrap gap-4 pt-2 text-black">
+            <Button asChild variant={"outline"} size="lg" >
+              <Link href="#projects">View Projects</Link>
             </Button>
 
-            {/* <Button variant="outline" asChild>
-              <Link href={resumeUrl} target="_blank" rel="noopener noreferrer">
-                <Download className="mr-2 h-4 w-4" />
-                Resume
-              </Link>
-            </Button> */}
           </div>
 
           <div className="flex items-center gap-4 pt-4">
