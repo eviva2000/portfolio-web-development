@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import {  Github, Linkedin, Twitter,} from "lucide-react";
+import {  Github, Linkedin,Mail,} from "lucide-react";
 import Link from "next/link";
 
 interface HeroSectionProps {
@@ -23,11 +23,11 @@ export default function HeroSection({
   title = "Web Developer",
   tagline = "Building elegant, responsive, and user-friendly web applications with modern technologies.",
   socialLinks = {
-    github: "https://github.com",
-    linkedin: "https://linkedin.com",
-    twitter: "https://twitter.com",
+    github: "https://github.com/eviva2000",
+    linkedin: "https://www.linkedin.com/in/elaheharjomandi/",
   },
 }: HeroSectionProps) {
+  const socialiconsClass='text-muted-foreground hover:text-yellow-500 transition-colors';
   return (
     <section className="relative min-h-screen w-full flex justify-center items-center py-20 px-4 md:px-8 lg:px-16  text-white ">
 <video
@@ -65,7 +65,7 @@ export default function HeroSection({
                 href={socialLinks.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                className={socialiconsClass}
               >
                 <Github className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
@@ -77,24 +77,19 @@ export default function HeroSection({
                 href={socialLinks.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                className={socialiconsClass}
+
               >
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
             )}
-
-            {socialLinks.twitter && (
-              <Link
-                href={socialLinks.twitter}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
+                <Link href="mailto:arjomandielaheh@gmail.com"
+                className={socialiconsClass}
+                >
+                <Mail className="h-5 w-5"/>
               </Link>
-            )}
+        
           </div>
         </div>
 
