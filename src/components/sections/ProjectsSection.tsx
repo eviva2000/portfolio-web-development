@@ -56,19 +56,7 @@ export default function ProjectsSection() {
       repoUrl: "https://github.com/example/project",
       category: "backend",
     },
-    {
-      id: "4",
-      title: "Weather Dashboard",
-      description:
-        "Interactive weather dashboard with real-time data visualization.",
-      image:
-        "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&q=80",
-      technologies: ["React", "Chart.js", "Weather API"],
-      demoUrl: "https://example.com/demo",
-      repoUrl: "https://github.com/example/project",
-      category: "frontend",
-    },
-   
+ 
   
   ];
 
@@ -82,7 +70,7 @@ export default function ProjectsSection() {
     <section id="projects" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">My Projects</h2>
+          <h2 className="text-3xl font-bold mb-4">My recent Projects</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Explore my recent work across various domains of web development.
             Each project demonstrates different skills and technologies.

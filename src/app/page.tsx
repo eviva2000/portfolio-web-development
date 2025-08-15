@@ -8,10 +8,9 @@ export default function Home() {
     <main className="min-h-screen bg-background">
       {/* Hero Section */}
       <HeroSection
-        name="Jane Doe"
-        title="Full Stack Developer"
+        name="Ella Arjomandi"
+        title="Web Developer"
         tagline="Building beautiful, functional web experiences with modern technologies"
-        imageUrl="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80"
       />
 
       

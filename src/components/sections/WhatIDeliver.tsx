@@ -1,32 +1,35 @@
 "use client";
 
 import { FC } from "react";
-import { Monitor,  Users,Timer } from "lucide-react";
+import { Monitor,Users,Timer} from "lucide-react";
 import { motion } from "framer-motion";
-import Lottie from "lottie-react";
+import dynamic from "next/dynamic";
 import webAnimation from "../../lotties/web-design.json";
+
+// Lazy-load Lottie component
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 const WhatIDeliver: FC = () => {
   const items = [
     {
-      icon: <Monitor className="w-6 h-6 text-blue-600" />,
+      icon: <Monitor className="w-6 h-6 icon" />,
       title: "Modern, user-friendly designs",
       description: "Websites that look great and work seamlessly on any device.",
     },
     {
-      icon: <Timer className="w-6 h-6 text-blue-600" />,
+      icon: <Timer className="w-6 h-6 icon" />,
       title: "Fast load times",
       description: "Optimized performance for better SEO and customer satisfaction.",
     },
     {
-      icon: <Users className="w-6 h-6 text-blue-600" />,
+      icon: <Users className="w-6 h-6  icon" />,
       title: "Accessible websites",
       description: "Inclusive design so everyone can use and enjoy your site.",
     },
   ];
 
   return (
-    <section className="py-16 md:py-40 bg-gray-50" id="what-i-deliver">
+    <section className="py-30 sm:py-42 bg-gray-50" id="what-i-deliver">
       <div className="max-w-6xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* Left: Text */}
         <div>
@@ -48,7 +51,7 @@ const WhatIDeliver: FC = () => {
           <div className="mt-10">
             <a
               href="#contact"
-              className="inline-block bg-blue-600 text-white px-6 py-3 rounded-md shadow hover:bg-blue-700 transition"
+              className="inline-block bg-[#F5B900] hover:bg-yellow-400 text-white font-semibold px-6 py-3 rounded-md shadow transition"
             >
               Let’s work together
             </a>

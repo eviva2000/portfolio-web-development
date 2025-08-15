@@ -24,3 +24,7 @@ body {
   color: var(--foreground);
   font-family: 'raleway' ,Arial, Helvetica, sans-serif;
 }
+
+.icon{
+  color:#F5B900
+}

@@ -1,7 +1,8 @@
+"use client";
+
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Download, Github, Linkedin, Twitter,} from "lucide-react";
-import Image from "next/image";
+import {  Github, Linkedin, Twitter,} from "lucide-react";
 import Link from "next/link";
 
 interface HeroSectionProps {
@@ -18,11 +19,9 @@ interface HeroSectionProps {
 }
 
 export default function HeroSection({
-  name = "Jane Doe",
-  title = "Full Stack Developer",
+  name = "Ella Arjomandi",
+  title = "Web Developer",
   tagline = "Building elegant, responsive, and user-friendly web applications with modern technologies.",
-  imageUrl = "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80",
-  resumeUrl = "#",
   socialLinks = {
     github: "https://github.com",
     linkedin: "https://linkedin.com",
@@ -30,8 +29,17 @@ export default function HeroSection({
   },
 }: HeroSectionProps) {
   return (
-    <section className="relative min-h-screen w-full flex flex-col justify-center items-center py-20 px-4 md:px-8 lg:px-16 bg-[url(/bg-purple22.svg)] text-white bg-cover bg-center bg-norepeate">
-      <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <section className="relative min-h-screen w-full flex justify-center items-center py-20 px-4 md:px-8 lg:px-16  text-white ">
+<video
+    className="absolute inset-0 w-full h-full object-cover z-0"
+    src="/video/bg-video.mp4" 
+    autoPlay
+    muted
+    loop
+    playsInline
+  />
+
+      <div className="max-w-3xl w-full flex gap-12 items-center justify-center relative z-10 text-center bg-white/10 backdrop-blur-lg rounded-2xl p-8 md:p-16 ">
         <div className="flex flex-col space-y-6 order-2 md:order-1">
           <div className="space-y-3">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
@@ -44,14 +52,14 @@ export default function HeroSection({
 
           <p className="text-lg text-muted-foreground max-w-md">{tagline}</p>
 
-          <div className="flex flex-wrap gap-4 pt-2 text-black">
+          <div className="flex flex-wrap justify-center gap-4 pt-2 text-black">
             <Button asChild variant={"outline"} size="lg" >
               <Link href="#projects">View Projects</Link>
             </Button>
 
           </div>
 
-          <div className="flex items-center gap-4 pt-4">
+          <div className="flex items-center justify-center gap-4 pt-4">
             {socialLinks.github && (
               <Link
                 href={socialLinks.github}
@@ -93,15 +101,6 @@ export default function HeroSection({
       
       </div>
 
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <Link
-          href="#skills"
-          className="text-muted-foreground hover:text-foreground transition-colors"
-        >
-          <ArrowDown className="h-6 w-6" />
-          <span className="sr-only">Scroll down</span>
-        </Link>
-      </div>
     </section>
   );
 }
