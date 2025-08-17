@@ -2,8 +2,9 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import {  Github, Linkedin,Mail,} from "lucide-react";
 import Link from "next/link";
+import { FiLinkedin,FiGithub } from "react-icons/fi"
+import { MdMailOutline } from "react-icons/md";
 
 interface HeroSectionProps {
   name?: string;
@@ -67,8 +68,7 @@ export default function HeroSection({
                 rel="noopener noreferrer"
                 className={socialiconsClass}
               >
-                <Github className="h-5 w-5" />
-                <span className="sr-only">GitHub</span>
+                <FiGithub className="h-5 w-5" />
               </Link>
             )}
 
@@ -80,14 +80,13 @@ export default function HeroSection({
                 className={socialiconsClass}
 
               >
-                <Linkedin className="h-5 w-5" />
-                <span className="sr-only">LinkedIn</span>
+                < FiLinkedin className="h-5 w-5" />
               </Link>
             )}
                 <Link href="mailto:arjomandielaheh@gmail.com"
                 className={socialiconsClass}
                 >
-                <Mail className="h-5 w-5"/>
+                < MdMailOutline  className="h-5 w-5"/>
               </Link>
         
           </div>

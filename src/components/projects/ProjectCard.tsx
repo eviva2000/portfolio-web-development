@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Card,
   CardContent,
@@ -7,7 +7,9 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github, Eye } from "lucide-react";
+import {   Eye, ChevronUp, ChevronDownCircle, ChevronDown } from "lucide-react";
+import { FiGithub } from "react-icons/fi"
+
 import Image from "next/image";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
@@ -35,6 +37,13 @@ project
     repoUrl,
     featured = false,
   } = project;
+
+  const [isDetailsOpen, setIsDetailsOpen] = useState(false)
+
+  const toggleDetails = () => {
+    setIsDetailsOpen(!isDetailsOpen);
+  };
+
   return (
     <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg bg-card h-full flex flex-col">
       <div className="relative">
@@ -59,13 +68,34 @@ project
 
       <CardContent className="flex-grow">
         <p className="text-muted-foreground mb-4">{description}</p>
-        <div className="flex flex-wrap gap-2 mt-2">
-          {technologies.map((tech, index) => (
-            <Badge key={index} variant="outline">
-              {tech}
-            </Badge>
-          ))}
-        </div>
+        <Button
+    variant="ghost"
+    size="sm"
+    onClick={toggleDetails}
+    className="w-full justify-start text-muted-foreground hover:bg-transparent hover:text-foreground"
+  >
+    {isDetailsOpen ? (
+      <>
+        <ChevronUp className="h-4 w-4 mr-2" /> Hide Details
+      </>
+    ) : (
+      <>
+        <ChevronDown className="h-4 w-4 mr-2" /> Show Details
+      </>
+    )}
+  </Button>
+        {isDetailsOpen && (
+    <div   className={`
+      flex flex-wrap gap-2 mt-4 transition-all duration-300
+      ${isDetailsOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}
+    `}>
+      {technologies.map((tech, index) => (
+        <Badge key={index} variant="outline">
+          {tech}
+        </Badge>
+      ))}
+    </div>
+  )}
       </CardContent>
 
       <CardFooter className="flex justify-between pt-2 gap-2">
@@ -77,9 +107,9 @@ project
           </Button>
         )}
         {repoUrl && (
-          <Button variant="outline" size="sm" className="flex-1" asChild>
+          <Button variant="default" size="sm" className="flex-1" asChild>
             <a href={repoUrl} target="_blank" rel="noopener noreferrer">
-              <Github className="mr-2 h-4 w-4" /> Code
+              <FiGithub className="mr-2 h-4 w-4" /> Code
             </a>
           </Button>
         )}
