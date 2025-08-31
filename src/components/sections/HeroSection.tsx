@@ -20,7 +20,7 @@ interface HeroSectionProps {
 }
 
 export default function HeroSection({
-  name = "Ella Arjomandi",
+  name = "Ela Arjomandi",
   title = "Web Developer",
   tagline = "Building elegant, responsive, and user-friendly web applications with modern technologies.",
   socialLinks = {

@@ -25,10 +25,58 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'raleway' ,Arial, Helvetica, sans-serif;
-
+  font-family: "raleway", Arial, Helvetica, sans-serif;
 }
 
-.icon{
-  color:#F5B900
+.icon {
+  color: #f5b900;
+}
+
+.video-card {
+  min-height: 568px;
+}
+
+.preview-card {
+  height: 100%;
+  cursor: pointer;
+}
+
+.video-popup .video-container {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.video-card {
+  max-width: 22rem; /* Constrain card width */
+  margin: 0 auto;
+}
+
+.video-container {
+  /* Mobile first - base styles - Portrait orientation */
+  border-radius: 10px;
+  width: 100%;
+  height: 50vh;
+  margin: 0 auto;
+  aspect-ratio: 9/16; /* Portrait aspect ratio */
+  max-width: 20rem; /* Smaller width */
+}
+
+/* Tablet and up */
+@media (min-width: 481px) {
+  .video-container {
+    height: 55vh;
+    border-radius: 15px;
+    max-width: 22rem;
+  }
+}
+
+/* Desktop and up */
+@media (min-width: 769px) {
+  .video-container {
+    width: 100%;
+    height: 32rem;
+    max-height: 65vh;
+    max-width: 22rem; /* Smaller desktop width */
+  }
 }

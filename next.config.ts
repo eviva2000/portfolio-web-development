@@ -2,9 +2,18 @@
 
 const nextConfig = {
   images: {
-      domains: ['images.unsplash.com'],
-  }
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "eyqyeuaguwojbsavaovr.supabase.co",
+        port: "",
+        pathname: "/storage/v1/object/public/cabin-images/**",
+      },
+    ],
+    domains: ['images.unsplash.com'],
+  },
 };
+
 
 if (process.env.NEXT_PUBLIC_TEMPO) {
   nextConfig["experimental"] = {

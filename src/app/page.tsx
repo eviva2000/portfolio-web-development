@@ -2,13 +2,14 @@ import React from "react";
 import HeroSection from "@/components/sections/HeroSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
 import WhatIDeliver from "@/components/sections/WhatIDeliver";
+import Footer from "@/components/sections/Footer";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-background">
       {/* Hero Section */}
       <HeroSection
-        name="Ella Arjomandi"
+        name="Ela Arjomandi"
         title="Web Developer"
         tagline="Building beautiful, functional web experiences with modern technologies"
       />
@@ -31,29 +32,20 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
               <img
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80"
-                alt="Jane Doe working"
-                className="rounded-lg shadow-lg w-full h-auto object-cover"
+                src="/avatar.svg"
+                alt="Ela avatar"
+                className="rounded-lg  w-full h-auto object-cover"
               />
             </div>
 
             <div className="space-y-4">
               <p className="text-lg">
-                I'm a passionate full stack developer with over 5 years of
-                experience creating modern web applications. My journey in web
-                development began with a curiosity about how websites work and
-                evolved into a career building solutions that solve real
-                problems.
+              I’m a dedicated web developer with 4+ years of experience building modern web applications. 
               </p>
+              <p className="text-lg">What started as curiosity about how websites work has grown into a career creating practical, user-focused solutions that make a real impact</p>
               <p className="text-lg">
-                I specialize in React and Next.js for frontend development,
-                paired with Node.js backends and various database technologies.
-                I'm committed to writing clean, maintainable code and creating
-                intuitive user experiences.
-              </p>
-              <p className="text-lg">
-                When I'm not coding, you can find me hiking, reading tech blogs,
-                or experimenting with new web technologies. I'm always open to
+                When I'm not coding, you can find me hiking, taking care of two kids,
+                or creating digital content. I'm always open to
                 new opportunities and collaborations.
               </p>
             </div>
@@ -64,12 +56,12 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4 md:px-8 lg:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 ">
             Get In Touch
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-6">
+          <div className="grid md:grid-cols-2  gap-8">
+            <div className="space-y-6 border-l pl-3 ">
               <h3 className="text-xl font-semibold">Contact Information</h3>
               <div className="space-y-3">
                 <p className="flex items-center gap-2">
@@ -89,10 +81,10 @@ export default function Home() {
                     <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                   </svg>
                   <a
-                    href="mailto:jane.doe@example.com"
+                    href="mailto:arjomandielaheh@gmail.com"
                     className="hover:underline"
                   >
-                    jane.doe@example.com
+                    arjomandielaheh@gmail.com
                   </a>
                 </p>
                 <p className="flex items-center gap-2">
@@ -110,14 +102,18 @@ export default function Home() {
                   >
                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                   </svg>
-                  <span>(123) 456-7890</span>
+                  <span>(45) 71559071</span>
                 </p>
               </div>
 
-              <h3 className="text-xl font-semibold pt-4">Connect</h3>
+              
+
+            </div>
+            <div className="space-y-6 border-l pl-3">
+            <h3 className="text-xl font-semibold ">Connect</h3>
               <div className="flex gap-4">
                 <a
-                  href="https://github.com"
+                  href="https://github.com/eviva2000/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-primary"
@@ -139,7 +135,7 @@ export default function Home() {
                   </svg>
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/elaheharjomandi/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-primary"
@@ -161,53 +157,7 @@ export default function Home() {
                     <circle cx="4" cy="4" r="2" />
                   </svg>
                 </a>
-                <a
-                  href="https://twitter.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-primary"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="lucide lucide-twitter"
-                  >
-                    <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
-                  </svg>
-                </a>
-              </div>
-
-              <div className="pt-4">
-                <a
-                  href="/resume.pdf"
-                  download
-                  className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90 transition-colors"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="lucide lucide-download"
-                  >
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                    <polyline points="7 10 12 15 17 10" />
-                    <line x1="12" x2="12" y1="15" y2="3" />
-                  </svg>
-                  Download Resume
-                </a>
+              
               </div>
             </div>
 
@@ -216,9 +166,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-6 px-4 border-t bg-muted/30 text-center">
-        <p>© {new Date().getFullYear()} Jane Doe. All rights reserved.</p>
-      </footer>
+      <Footer />
     </main>
   );
 }

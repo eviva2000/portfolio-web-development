@@ -29,6 +29,7 @@ const ProjectCard = ({
 project
 }: ProjectCardProps) => {
   const {
+    id,
     title,
     description,
     image,
@@ -43,6 +44,9 @@ project
   const toggleDetails = () => {
     setIsDetailsOpen(!isDetailsOpen);
   };
+  const handleClick=()=>{
+    console.log('he')
+  }
 
   return (
     <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg bg-card h-full flex flex-col">
@@ -74,7 +78,7 @@ project
     onClick={toggleDetails}
     className="w-full justify-start text-muted-foreground hover:bg-transparent hover:text-foreground"
   >
-    {isDetailsOpen ? (
+    {/* {isDetailsOpen ? (
       <>
         <ChevronUp className="h-4 w-4 mr-2" /> Hide Details
       </>
@@ -82,9 +86,9 @@ project
       <>
         <ChevronDown className="h-4 w-4 mr-2" /> Show Details
       </>
-    )}
+    )} */}
   </Button>
-        {isDetailsOpen && (
+      
     <div   className={`
       flex flex-wrap gap-2 mt-4 transition-all duration-300
       ${isDetailsOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}
@@ -95,24 +99,25 @@ project
         </Badge>
       ))}
     </div>
-  )}
+
       </CardContent>
 
-      <CardFooter className="flex justify-between pt-2 gap-2">
-        {demoUrl && (
-          <Button variant="default" size="sm" className="flex-1" asChild>
+      <CardFooter className={`flex pt-2 gap-2 ${id==='3' ? 'justify-center' : 'justify-between'}`}>
+         {id==='3'? <Button variant="default" size="sm" className="flex-1" onClick={handleClick} >Few samples</Button>:
+         <> <Button variant="default" size="sm" className="flex-1" asChild>
             <a href={demoUrl} target="_blank" rel="noopener noreferrer">
               <Eye className="mr-2 h-4 w-4" /> Live Demo
             </a>
           </Button>
-        )}
-        {repoUrl && (
+        
+       
           <Button variant="default" size="sm" className="flex-1" asChild>
             <a href={repoUrl} target="_blank" rel="noopener noreferrer">
               <FiGithub className="mr-2 h-4 w-4" /> Code
             </a>
           </Button>
-        )}
+          </>
+        }
       </CardFooter>
     </Card>
   );

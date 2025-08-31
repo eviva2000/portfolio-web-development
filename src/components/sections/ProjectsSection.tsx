@@ -18,30 +18,29 @@ type Project = {
 export default function ProjectsSection() {
   const [activeFilter, setActiveFilter] = useState<string>("all");
 
-  // Sample projects data
   const projects: Project[] = [
     {
       id: "1",
-      title: "E-Commerce Platform",
+      title: "A boutique hotel website",
       description:
-        "A full-stack e-commerce solution with product management, cart functionality, and payment processing.",
+        "A modern, full-stack web application for a fictional luxury cabin hotel built with Next.js 15. Guests can browse cabins, check availability, and manage their reservations with a seamless user experience.",
       image:
-        "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      demoUrl: "https://example.com/demo",
-      repoUrl: "https://github.com/example/project",
+        "https://eyqyeuaguwojbsavaovr.supabase.co/storage/v1/object/public/cabin-images/cabin-008.jpg",
+      technologies: ["Nextjs", "Supabase", "NextAuth", "Vercel"],
+      demoUrl: "https://the-wild-oasis-customer-website-seven.vercel.app",
+      repoUrl: "https://github.com/eviva2000/the-wild-oasis-customer-website",
       category: "fullstack",
     },
     {
       id: "2",
-      title: "Portfolio Website",
+      title: "Beauty product landing page",
       description:
-        "A responsive portfolio website built with modern web technologies.",
+        "A responsive website built with modern web technologies designed to showcase products while reflecting the brand’s identity and style.",
       image:
-        "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=800&q=80",
+        "https://eyqyeuaguwojbsavaovr.supabase.co/storage/v1/object/public/cabin-images/minimal-sandwall.png",
       technologies: ["Next.js", "Tailwind CSS", "Framer Motion"],
-      demoUrl: "https://example.com/demo",
-      repoUrl: "https://github.com/example/project",
+      demoUrl: "https://nordicbeauty.vercel.app/",
+      repoUrl: "https://github.com/eviva2000/Nordicbeauty",
       category: "frontend",
     },
     {
@@ -72,7 +71,7 @@ export default function ProjectsSection() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">My recent Projects</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Explore my recent work across various domains of web development.
+            Explore my recent work across various domains of digital experience.
             Each project demonstrates different skills and technologies.
           </p>
         </div>

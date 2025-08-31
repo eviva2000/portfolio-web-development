@@ -13,7 +13,7 @@ const WhatIDeliver: FC = () => {
   const items = [
     {
       icon: <Monitor className="w-6 h-6 icon" />,
-      title: "Modern, user-friendly designs",
+      title: "Modern, user-friendly web applications",
       description: "Websites that look great and work seamlessly on any device.",
     },
     {

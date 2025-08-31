@@ -19,7 +19,7 @@ const raleway= Raleway({
 });
 
 export const metadata: Metadata = {
-  title: "Ella A.- Web Developer",
+  title: "Ela A.- Web Developer",
   description: "I build elegant, responsive, and user-friendly web applications with modern technologies.",
 };
 
