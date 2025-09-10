@@ -37,7 +37,7 @@ export default function ProjectsSection() {
       description:
         "A hotel management dashboard built with React and Supabase. This application provides a comprehensive interface for managing hotel operations including bookings, cabins, guests, and settings.",
       image:
-        "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&q=80",
+        "https://eyqyeuaguwojbsavaovr.supabase.co/storage/v1/object/public/cabin-images/dashboard2.png",
       technologies: ["Express.js", "PostgreSQL", "JWT"],
       demoUrl: "https://wild-oasis-staff-dashboard.vercel.app",
       repoUrl: "https://github.com/eviva2000/Wild-Oasis-staff-dashboard",
