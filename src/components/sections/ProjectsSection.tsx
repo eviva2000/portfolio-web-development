@@ -33,6 +33,18 @@ export default function ProjectsSection() {
     },
     {
       id: "2",
+      title: "ReservationHub",
+      description:
+        "A hotel management dashboard built with React and Supabase. This application provides a comprehensive interface for managing hotel operations including bookings, cabins, guests, and settings.",
+      image:
+        "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&q=80",
+      technologies: ["Express.js", "PostgreSQL", "JWT"],
+      demoUrl: "https://wild-oasis-staff-dashboard.vercel.app",
+      repoUrl: "https://github.com/eviva2000/Wild-Oasis-staff-dashboard",
+      category: "backend",
+    },
+    {
+      id: "4",
       title: "Beauty product landing page",
       description:
         "A responsive website built with modern web technologies designed to showcase products while reflecting the brand’s identity and style.",
@@ -43,18 +55,7 @@ export default function ProjectsSection() {
       repoUrl: "https://github.com/eviva2000/Nordicbeauty",
       category: "frontend",
     },
-    {
-      id: "3",
-      title: "Task Management API",
-      description:
-        "RESTful API for task management with authentication and authorization.",
-      image:
-        "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&q=80",
-      technologies: ["Express.js", "PostgreSQL", "JWT"],
-      demoUrl: "https://example.com/demo",
-      repoUrl: "https://github.com/example/project",
-      category: "backend",
-    },
+   
  
   
   ];
